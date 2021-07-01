@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash
 
 # This is the main script which calls other scripts to install stuff
 source helpers.sh
@@ -6,7 +6,7 @@ source helpers.sh
 print_info "Doing Basic update and upgrade"
 
 sudo apt update
-sudo apt upgrade
+sudo apt -y upgrade
 
 print_info "Update and upgrading done ... Moving to Custom stuff"
 

@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash
 
 # test node
 print_info "Starting Tests ..."

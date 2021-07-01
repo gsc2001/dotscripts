@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash
 
 # Script to install stuff in this directory
 

@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash
 
 print_info "Installing gh ..."
 
