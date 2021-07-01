@@ -1,0 +1,115 @@
+alias iiit="cd ~/IIIT-Stuff"
+
+
+# git
+alias gs="git status"
+
+# pushing
+alias gp="git push $1 $2"
+alias gpomf="git push origin +master"
+alias gpumf="git push upstream +master"
+alias gpom="git push origin master"
+alias gpum="git push upstream master"
+alias gpo="git push origin $1"
+alias gpof="git push origin $1 -f"
+
+# fetching
+alias gfa="git fetch --all --prune"
+
+# checkouts
+alias gco="git checkout $1"
+alias gcb="git checkout -b $1"
+
+# branch
+alias gb="git branch"
+
+# pulling
+alias gplum="git pull upstream master --rebase"
+alias gplom="git pull origin master --rebase"
+alias gplo="git pull origin $1 --rebase"
+alias gplu="git pull upstream $1 --rebase"
+
+# commit
+alias gcs="git commit -S"
+
+# custom
+gstart() 
+{
+	# if brach supplied
+	if test "$1" = ""
+		then
+		    gco master && gplum && gpom
+	else
+	{
+		echo "hi"
+		gco $1 && git pull upstream $1 --rebase && gpof $1
+	}
+	fi
+}
+
+# docker
+alias dc="docker-compose"
+
+open()
+{
+    xdg-open $1 &> /dev/null &
+}
+
+
+# Function to run c++ codes
+run()
+{
+		if g++ -D LOCAL $1
+				then
+				{
+						echo "Compilation succesfull"
+						echo "Running..."
+						./a.out
+				}
+		else
+		{
+				echo "Compilation Unsuccesfull..."
+				echo "Abort ...."
+		}
+		fi
+}
+
+# Helper to start envs
+start() 
+{
+    source ~/environments/$1_env.sh
+}
+
+# copy paste stuff
+
+v()
+{
+    eval "$(xclip -sel clipboard -o)"
+}
+
+alias V="xclip -sel clipboard"
+#alias rm="rm -i"
+
+alias sp="cd ~/Projects/self_projects/"
+alias clp="cd ~/Projects/client_projects/"
+
+# create a symlink of current folder to DATA
+#make_sym() {
+#    path_arr=($(echo $PWD | tr '/' "\n"))
+#    _temp_path=${path_arr[@]:2}
+#    home_path=${_temp_path// /\/}
+#    _path=~/DATA/$home_path
+#    mkdir -p $_path
+#    ln -s $_path archive
+#}
+
+# kitty stuff
+# alias icat="kitty +kitten icat"
+
+
+# export a .env 
+alias export_env="export \$(grep -v '^#' .env | xargs)"
+
+
+
+
