@@ -12,19 +12,17 @@ print_info "Update and upgrading done ... Moving to Custom stuff"
 
 print_info "Copying Custom files to home"
 
-mkdir -p ~/.themes/Orchis-dark-compact
-cp ../../config/themes/Orchis-dark-compact ~/.themes/Orchis-dark-compact
+mkdir -p /home/gsc2001/.themes/Orchis-dark-compact
+cp ../../config/themes/Orchis-dark-compact /home/gsc2001/.themes/Orchis-dark-compact -r
 
-cp ../../config/college.ovpn ~/.college.ovpn
+cp ../../config/college.ovpn /home/gsc2001/.college.ovpn
 
-# zsh
-./zsh/install.sh
 
 # Docker
-./docker/install.sh
+#source docker/install.sh
 
 # Programming Tools
-./programming_tools.sh
+source programming_tools/install.sh
 
 print_info "Major Stuff Done ..."
 print_info "Now you need to do the following ... "

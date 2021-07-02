@@ -1,9 +1,5 @@
 #!/bin/bash
 
-print_info "Installing zsh ..."
-
-sudo apt install zsh
-
 print_info "Zsh installed ... Copying config files"
 
 cp ../../../config/zsh/.zshrc ~/.zshrc

@@ -3,10 +3,13 @@
 # Script to install stuff in this directory
 
 # nodejs
-./nodejs.sh
+source programming_tools/nodejs.sh
 
 # virualenv wrapper
-./virtualenv_wrapper.sh
+source programming_tools/virualenv_wrapper.sh
 
 # conda
-./conda.sh
+source programming_tools/conda.sh
+
+#gh
+source programming_tools/gh.sh
